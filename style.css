@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    background-color: #0C0C0C;
+    color: #00FF00;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 inset;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    position: relative;
+}
+
+#game-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 0, 0.15),
+        rgba(0, 255, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    color: #00FF00;
+    text-shadow: 0 0 5px #00FF00;
+    margin-bottom: 30px;
+}
+
+#story-text {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-left: 3px solid #00FF00;
+}
+
+#choice-container {
+    margin-bottom: 20px;
+}
+
+.choice-btn, #action-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: transparent;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.choice-btn:hover, #action-buttons button:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 10px #00FF00;
+}
+
+#player-stats {
+    margin-top: 20px;
+    border-top: 1px solid #00FF00;
+    padding-top: 10px;
+}
+
+#player-stats p {
+    margin: 5px 0;
+}
+
+#action-buttons {
+    margin-top: 20px;
+    border-top: 1px solid #00FF00;
+    padding-top: 10px;
+}
+
+#action-buttons button {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#game-container::after {
+    content: "_";
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: #00FF00;
+    font-size: 24px;
+    animation: blink 1s infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0C0C0C;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00FF00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00CC00;
+}

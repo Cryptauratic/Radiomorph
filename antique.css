@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+
+body {
+    background-color: #f2e8c9;
+    color: #3a3a3a;
+    font-family: 'IM Fell English', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #8b4513;
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    position: relative;
+    background-color: #fffbf0;
+}
+
+#game-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    color: #8b4513;
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.3);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+#story-text {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(139, 69, 19, 0.1);
+    border-left: 3px solid #8b4513;
+    font-style: italic;
+}
+
+#choice-container {
+    margin-bottom: 20px;
+}
+
+.choice-btn, #action-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e6d3a7;
+    color: #3a3a3a;
+    border: 1px solid #8b4513;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-family: 'IM Fell English', serif;
+    font-size: 16px;
+}
+
+.choice-btn:hover, #action-buttons button:hover {
+    background-color: #d4b16a;
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
+}
+
+#player-stats {
+    margin-top: 20px;
+    border-top: 1px solid #8b4513;
+    padding-top: 10px;
+}
+
+#player-stats p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+#action-buttons {
+    margin-top: 20px;
+    border-top: 1px solid #8b4513;
+    padding-top: 10px;
+}
+
+#action-buttons button {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f2e8c9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8b4513;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b3410;
+}
